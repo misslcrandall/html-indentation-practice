@@ -1,8 +1,8 @@
-# html-indentation-practice (IN - PROGRESS)
+# html-indentation-practice (IN PROGRESS)
 Tool for students to practice HTML indentation
 
 ## Demo Link:
-
+https://misslcrandall.github.io/html-indentation-practice/
 
 ## About
 When I began teaching HTML, I noticed many of my students struggled nesting elements and knowing when to indent elements.
