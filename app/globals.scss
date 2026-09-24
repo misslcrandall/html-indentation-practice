@@ -1,0 +1,65 @@
+html{
+    font-size: 16px;
+}
+
+body{
+    position: relative;
+    margin: 0;
+}
+
+.sidebar-nav{
+    background-color: $backgroundWhite;
+    border-bottom: $borderDefault;
+    padding: 12px 8px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    @include breakpointAbove($breakpointDesktopSmall){
+        border-bottom: none;
+        border-right: $borderDefault;
+        right: unset;
+        bottom: 0;
+        &--inner{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+}
+
+main{
+    padding: 0 48px;
+    flex-grow: 1;
+    //margin-top: 72px;
+    @include breakpointAbove($breakpointTablet){
+        //margin-left: 214px;
+    }
+    @include breakpointAbove($breakpointDesktopSmall){
+        //margin-top: 0;
+        //margin-left: 278px;
+    }
+}
+
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.btn-primary{
+    @include buttonPrimary;
+}
+//Browser Resets
+input, textarea, select, button {
+    font-family: inherit;
+}

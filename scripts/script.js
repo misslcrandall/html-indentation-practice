@@ -1,4 +1,4 @@
-const htmlCodeEditor = document.getElementById("htmlCode");
+/* const htmlCodeEditor = document.getElementById("htmlCode");
 const previewWindow = document.getElementById("previewWindow").contentWindow.document;
 
 function runEditor() {
@@ -91,4 +91,4 @@ document.addEventListener('DOMContentLoaded', () => {
     //Watch for changes
     htmlCodeEditor.addEventListener("keyup", runEditor);
     htmlCodeEditor.addEventListener('keydown', handleIndent);
-});
+}); */

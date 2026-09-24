@@ -1,0 +1,35 @@
+.editor{
+    display: flex;
+    height: 70vh;
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+    }
+    section{
+        flex: 1;
+        height: 100%;
+    }
+    textarea, iframe{
+        border: solid 1px black;
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+    }
+    textarea{
+        border-right: none;
+        overflow: scroll;
+        padding: 24px 8px;
+        resize: none;
+        height: 50%;
+    }
+    iframe{
+        height: 100%;
+    }
+    details{
+        display: block;
+        border: solid 1px black;
+        box-sizing: border-box;
+        height: 50%;
+        width: 100%;
+        overflow: scroll;
+    }
+}

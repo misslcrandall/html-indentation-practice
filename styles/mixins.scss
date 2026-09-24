@@ -1,0 +1,57 @@
+@use "variables" as *;
+
+//Normally I would seperate these into categories in their own Sass file in a 'Mixins' folder)
+
+//Utility Mixins
+@mixin breakpointAbove($breakpoint) {
+    @media (min-width: ($breakpoint)) {
+        @content;
+    }
+}
+
+//Compontent Mixins
+@mixin inputField{
+    border: none;
+    border-radius: $borderRadiusSmall;
+    background-color: #F5F5F5;
+    color: $fontColorMedium;
+    font-size: 1rem; //Made this bigger on mobile for acessability
+    font-weight: 600; //Fix to Semi-Bold
+    padding: 7px 5px;
+    max-width: calc(100% - 10px);
+    transition: $transitionDefault;
+    width: 100%;
+    &:hover{
+        background-color: $backgroundLight;
+    }
+    @include breakpointAbove($breakpointTablet){
+        font-size: 0.625rem; //Might still reccomend this is larger on desktop for usability
+    }
+}
+
+@mixin cardBase {
+    border: $borderDefault;
+    border-radius: $borderRadiusSmall;
+    padding: 24px 32px;
+}
+
+//Buttons
+@mixin buttonBase {
+    cursor: pointer;
+    border: none;
+    border-radius: $borderRadiusSmall;
+    font-weight: 700;
+    font-size: 0.875rem;
+    min-width: 100px;
+    padding: 8px 16px;
+    transition: $transitionDefault
+}
+
+@mixin buttonPrimary {
+    @include buttonBase;
+    background-color: $accentColorPrimary;
+    color: $fontColorWhite;
+    &:hover{
+        background-color: $darkPurple; //Placeholder, confirm with designer
+    }
+}

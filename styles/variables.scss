@@ -1,0 +1,62 @@
+//Normally I would verify with the designers that these differences are intentional rather than mistakes, but I have left them as-is for the sake of the exercise.
+$black: #000000; //Subtext Items
+$gray-1: #222222; //Header
+$gray-2: #393551; //Body Text
+$gray-3: #444444;
+$gray-4: #767676;
+$gray-5: #777777;
+$gray-6: #979797;
+$gray-7:#CCCCCC;
+$gray-8: #F5F5F5;
+
+
+//Purple Grays
+$brandPurple: #5c00dc;
+$darkPurple: #393551;
+$grape: #AB99FF;
+$borderGray: #CBC6DE;
+
+//Brand Purple w/ 8% Opacity
+//Background is #5C00DC at 8% == #F2EBFD
+$brandPurpleTransparent: rgba(92, 0, 220, .08);
+
+//These two also feel like mistakes
+$brandBerry: #E71356;
+$brandPink: #ED1A5D;
+
+$white: #ffffff;
+
+
+//Double Variables so the colors can be adjusted
+$accentColorPrimary: $brandPurple;
+$accentColorSecondary: $brandBerry;
+
+
+$backgroundWhite: $white;
+$backgroundLight: $gray-7;
+$backgroundMed: $gray-4;
+$backgroundDark: $gray-3;
+
+$fontColorWhite: $white;
+$fontColorLight: $gray-4; //Would definitely check with the designer to see if the difference between these two is intentional
+$fontColorMedium2: $gray-3;
+$fontColorMedium: $gray-5;
+$fontColorDark: $gray-1;
+$fontColorBody: $darkPurple;
+
+$borderPrimary: $borderGray;
+
+$borderDefault: solid 1px $borderPrimary;
+
+$borderRadiusSmall: 4px;
+$borderRadiusMedium: 8px;
+
+
+//Breakpoints
+$breakpointMobile: 500px;
+$breakpointTablet: 720px;
+$breakpointDesktopSmall: 1020px;
+$breakpointDesktop: 1280px;
+
+//Transitions
+$transitionDefault: .2s ease all;

@@ -2,9 +2,13 @@
 Tool for students to practice HTML indentation
 
 ## Demo Link:
-https://misslcrandall.github.io/html-indentation-practice/
+
 
 ## About
+Update - 9/23:
+I reworked the orinal HTML/Vanilla JS into a Next.JS app so that I could pull the linter compontent into the web client. Currently working on text editor bugs.
+
+Original:
 When I began teaching HTML, I noticed many of my students struggled nesting elements and knowing when to indent elements.
 
 I wanted to create an app that let them practice specific scenarios, like nested divs and sibling elements, so I setup a basic editor with a textarea element and iframe. I added some JS to make sure the text area could handle tabbed indentation, then began searching for a linter to check the formatting.
@@ -14,3 +18,11 @@ Finding a linter proved more difficult than I expected, since most were not desi
 Once that is working, the next step will be building in multiple challenges and the option to progress between them.
 
 And of course, the fun part—styling!
+
+## Getting Started
+
+First, run the development server:
+
+npm run dev
+
+Then, open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
