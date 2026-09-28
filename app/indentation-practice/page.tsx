@@ -8,17 +8,18 @@ export const metadata: Metadata = {
   description: 'Exercises for practicing HTML intdentation',
 };
 
+const year = String(new Date().getFullYear());
 
 export default function Page() {
     return (
         <>
-            <header>
-                <h1>HTML Indentation Practice Editor</h1>
-                <p className="instructions">Instruction Copy lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <header className={`${styles.header}`}>
+                <h1>HTML Indentation Practice</h1>
+                <p className="instructions">Complete the questions below to practice HTML indentation.</p>
             </header>
             <QuestionCarousel />
-            <footer>
-                <p>Copyright 2026, Crandall Creative, LLC</p>
+            <footer className={`${styles.footer} flex justify-content`}>
+                <p>Copyright {year}, Crandall Creative, LLC</p>
                 <p><a href="https://lisaacrandall.com" target="_blank">lisaacrandall.com</a></p>
             </footer>
         </>

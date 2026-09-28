@@ -1,0 +1,9 @@
+.errorDisplay{
+    summary{
+        list-style-type: none;
+        &::marker, &::-webkit-details-marker{
+            display: none;
+            content: '';
+        }
+    }
+}

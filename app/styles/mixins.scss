@@ -1,0 +1,30 @@
+@use "variables" as *;
+
+//Utility Mixins
+@mixin breakpointAbove($breakpoint) {
+    @media (min-width: ($breakpoint)) {
+        @content;
+    }
+}
+
+//Compontent Mixins
+
+//Buttons
+@mixin buttonBase {
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: $grey-500;
+    border: none;
+    border-radius: $borderRadiusSmall;
+    color: $grey-300;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 0.875rem;
+    min-width: 100px;
+    padding: 8px 16px;
+    transition: $transitionDefault
+}
+
+@mixin buttonPrimary {
+    @include buttonBase;
+}

@@ -1,5 +1,6 @@
 "use client";
 
+import styles from './linter-errors.module.scss';
 import { useEffect } from "react"; // Added useEffect
 import { Linter } from "eslint-linter-browserify";
 import htmlParser from "@html-eslint/parser";
@@ -8,8 +9,6 @@ import htmlPlugin from "@html-eslint/eslint-plugin";
 interface TextAreaProps {
   challengeSolved: (solved: boolean) => void;
   codeInput: string;
-  onChange: (e: any) => void; 
-  onKeyDown: (e: any) => void; 
 }
 
 export default function ClientLinter({ codeInput, challengeSolved }: TextAreaProps) {
@@ -50,7 +49,7 @@ function Errors({ messages }: { messages: any[] }) {
   }
 
   return (
-    <details open>
+    <details open className={styles.errorDisplay}>
         <summary>
           <h2>{messages.length} Errors</h2>
         </summary>

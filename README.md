@@ -5,6 +5,8 @@ Tool for students to practice HTML indentation
 
 
 ## About
+Update — 9/28: I replaced the textarea compntent and custom event handling in the code editor with the Monaco code editor. I also began adding styles. 
+
 Update - 9/23:
 I reworked the orinal HTML/Vanilla JS into a Next.JS app so that I could pull the linter compontent into the web client. Currently working on text editor bugs.
 

@@ -1,0 +1,23 @@
+$black: #03090A;
+$grey-100: #081A1E; //Background
+$grey-200: #162D34; // Quiz Background
+$grey-300: #14333C; // Element Background
+$grey-400: #436975;
+$grey-500: #AEC8D0; // Text
+$white: #E1E9EF;
+
+$backgroundPrimary: $grey-100;
+$backgroundLight: $grey-500;
+
+$fontColorLight: $white;
+
+$borderRadiusSmall: 5px;
+
+//Breakpoints
+$breakpointMobile: 500px;
+$breakpointTablet: 720px;
+$breakpointDesktopSmall: 1020px;
+$breakpointDesktop: 1280px;
+
+//Transitions
+$transitionDefault: .2s ease all;

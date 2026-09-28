@@ -1,0 +1,7 @@
+@import "styles/variables.scss";
+
+$backgroundLight: "green";
+
+:export {
+  backgroundLight: $backgroundLight;
+}
