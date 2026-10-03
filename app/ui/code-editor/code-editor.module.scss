@@ -3,15 +3,34 @@
     display: flex;
     height: 70vh;
     max-height: 500px;
+    border-radius: 8px;
+    overflow: hidden;
     @media screen and (max-width: 600px) {
         flex-direction: column;
+    }
+    .editorRowInput{
+        position: relative;
+        button{
+            @include buttonPrimary;
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+        }
+    }
+    .editorRowOutput{
+        display: flex;
+        flex-direction: column;
+        max-width: 40%;
+    }
+    .editorRowEditor{
+        max-height: 100%;
     }
     section{
         flex: 1;
         height: 100%;
     }
     textarea, iframe{
-        border: solid 1px black;
+        border: none;
         box-sizing: border-box;
         display: block;
         width: 100%;
@@ -26,13 +45,18 @@
     }
     iframe{
         height: 100%;
+        flex: 1 1 auto;
     }
     details{
+        background-color: $grey-400;
+        color: $white;
         display: block;
-        border: solid 1px black;
         box-sizing: border-box;
-        height: 50%;
         width: 100%;
         overflow: scroll;
+        flex: 0 1 auto;
+    }
+    .linter{
+        max-height: 40%;
     }
 }

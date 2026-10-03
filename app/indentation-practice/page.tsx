@@ -15,7 +15,7 @@ export default function Page() {
         <>
             <header className={`${styles.header}`}>
                 <h1>HTML Indentation Practice</h1>
-                <p className="instructions">Complete the questions below to practice HTML indentation.</p>
+                <p className={`${styles.instructions}`}>Complete the questions below to practice HTML indentation.</p>
             </header>
             <QuestionCarousel />
             <footer className={`${styles.footer} flex justify-content`}>

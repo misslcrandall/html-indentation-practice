@@ -28,6 +28,10 @@ main{
     }
 }
 
+h1{
+    margin-bottom: 0;
+}
+
 a{
     color: $fontColorLight; 
 }
@@ -35,13 +39,17 @@ a{
 .btn-primary{
     @include buttonPrimary;
 }
-.bt_active{
+.btn__active{
     @include buttonPrimary;
+    &.button__next{
+        background-color: $green;
+    }
 }
-.bt_disabled{
+.btn__disabled{
     @include buttonBase;
     color: $grey-400;
     cursor: auto;
+    svg path{fill: $grey-400;}
     &.button__prev{
         opacity: 0;
     }

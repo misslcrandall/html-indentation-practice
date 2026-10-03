@@ -38,8 +38,8 @@ export default function CodeEditor({ challengeSolved, codeBlock }) {
         <head>
             <style>
                 html{
-                    background-color: #AEC8D0;
-                    color: #081A1E;
+                    background-color: #aec8d0;
+                    color: #081a1e;
                     padding: 20px;
                     margin: 0;
                 }
@@ -64,9 +64,10 @@ export default function CodeEditor({ challengeSolved, codeBlock }) {
     return(
         <>
             <div className={`${styles.editor}`}>
-                <section className="editor-row__input"> 
+                <section className={`${styles.editorRowInput}`}> 
                     <Editor
-                        height="300px"
+                        className={styles.editorRowEditor}
+                        height="100%"
                         defaultLanguage="html"
                         value={content}
                         theme="vs-dark"
@@ -77,18 +78,23 @@ export default function CodeEditor({ challengeSolved, codeBlock }) {
                             fontSize: 16,
                             minimap: { enabled: false },
                             automaticLayout: true,
+                            padding: { bottom: 30, top: 30 },
+                            scrollBeyondLastLine: false,
                         }}
                     />
-                    <ClientLinter 
-                        codeInput={content}
-                        challengeSolved={challengeSolved}
-                    /> 
+                    <button onClick={() => setContent(codeBlock)}>Reset Code Editor</button>
                 </section>
-                <section className="editor-row__output">
+                <section className={`${styles.editorRowOutput}`}>
                     <iframe 
                         id="previewWindow"
                         srcDoc={iframeSetup}
                     />
+                    <div className={`${styles.linter}`}>
+                        <ClientLinter 
+                            codeInput={content}
+                            challengeSolved={challengeSolved}
+                        /> 
+                    </div>
                 </section>
             </div>
         </>

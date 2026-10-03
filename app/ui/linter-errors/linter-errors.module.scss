@@ -1,9 +1,43 @@
 .errorDisplay{
+    background-color: $grey-400;
+    color: $white;
+    padding: 16px;
+    max-height: 100%;
+    &[open]{
+        summary svg{
+            transform: rotate(180deg);
+        } 
+    }
     summary{
+        display: flex;
+        justify-content: space-between;
         list-style-type: none;
+        padding-bottom: .5rem;
         &::marker, &::-webkit-details-marker{
             display: none;
             content: '';
         }
+        h2{margin: 0;}
+        svg{
+            transition: $transitionDefault;
+            width: 32px;
+            path{fill:$white;}
+        }
+    }
+    .errorList{
+        overflow: scroll;
+    }
+}
+
+.errorsResolved{
+    background-color: $grey-400;
+    color: $white;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    h2{margin: 0 0 .5rem;}
+    svg{
+        width: 32px;
+        path{fill:$green;}
     }
 }
