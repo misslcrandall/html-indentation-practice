@@ -20,7 +20,7 @@ export default function Page() {
             <QuestionCarousel />
             <footer className={`${styles.footer} flex justify-content`}>
                 <p>Copyright {year}, Crandall Creative, LLC</p>
-                <p><a href="https://lisaacrandall.com" target="_blank">lisaacrandall.com</a></p>
+                <p><a href="https://github.com/misslcrandall/html-indentation-practice" target="_blank">GitHub</a> | <a href="https://lisaacrandall.com" target="_blank">lisaacrandall.com</a></p>
             </footer>
         </>
     );
