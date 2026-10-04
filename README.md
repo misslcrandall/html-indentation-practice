@@ -1,7 +1,7 @@
 # html-indentation-practice (IN PROGRESS)
 Tool for students to practice HTML indentation
 
-## Demo Link: <a href="https://github.com/misslcrandall/html-indentation-practice" target="_blank">GitHub</a>
+## Demo Link: <a href="https://html-indentation-practice.vercel.app/indentation-practice" target="_blank">https://html-indentation-practice.vercel.app/indentation-practice</a>
 
 ## About
 Update - 9/28: I replaced the textarea compntent and custom event handling in the code editor with the Monaco code editor. I also began adding styles. 
