@@ -20,7 +20,9 @@
     .editorRowOutput{
         display: flex;
         flex-direction: column;
-        max-width: 40%;
+        @include breakpointAbove($breakpointTablet){
+            max-width: 40%;
+        }
     }
     .editorRowEditor{
         max-height: 100%;
@@ -47,16 +49,9 @@
         height: 100%;
         flex: 1 1 auto;
     }
-    details{
-        background-color: $grey-400;
-        color: $white;
-        display: block;
-        box-sizing: border-box;
-        width: 100%;
-        overflow: scroll;
-        flex: 0 1 auto;
-    }
     .linter{
-        max-height: 40%;
+        @include breakpointAbove($breakpointTablet){
+            max-height: 40%;
+        }
     }
 }

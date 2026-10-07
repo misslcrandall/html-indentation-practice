@@ -55,6 +55,10 @@ export default function CodeEditor({ challengeSolved, codeBlock }) {
 
     function handleEditorDidMount(editor, monaco) {
         editorRef.current = editor;
+        /* Potentially add more keybaord acessability features here */
+        /*  editor.addCommand(monaco.KeyCode.Escape, function () {
+            editor.trigger('keyboard', 'editor.action.toggleTabFocusMode');
+        }, '!findWidgetVisible && !inReferenceSearchEditor && !editorHasSelection'); */
     }
 
     function handleEditorChange(value, event) {
@@ -78,7 +82,7 @@ export default function CodeEditor({ challengeSolved, codeBlock }) {
                             fontSize: 16,
                             minimap: { enabled: false },
                             automaticLayout: true,
-                            padding: { bottom: 30, top: 30 },
+                            padding: { bottom: 80, top: 30 },
                             scrollBeyondLastLine: false,
                         }}
                     />

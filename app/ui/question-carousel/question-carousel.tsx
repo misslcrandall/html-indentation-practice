@@ -45,8 +45,8 @@ export default function QuestionCarousel() {
     return (
       <div className={`${styles.quiz}`}>
         <div className={`${styles.endPage}`}>
-          <h2 className="">Exercise Complete</h2>
-          <p className="">You have answered all the questions correctly.</p>
+          <h2>Exercise Complete</h2>
+          <p>You have answered all the questions correctly.</p>
           <button
             onClick={handleRestart}
             className="btn-primary"
@@ -61,16 +61,14 @@ export default function QuestionCarousel() {
   return (
     <div className={`${styles.quiz}`}>
       <div className={`flex justify-content ${styles.heading}`}>
-          <div>
-            <h2 className="">{currentQuestion.instructions}</h2>
-            <p>{currentQuestion.help_text}</p>
+          <div className={`${styles.instructions}`}>
+            <h2 dangerouslySetInnerHTML={{ __html: currentQuestion.instructions }} />
+            <p dangerouslySetInnerHTML={{ __html: currentQuestion.help_text }} />
           </div>
           <div className={`${styles.questionNumber}`}>
             <p>{currentIndex + 1} / {CodeChallengeData.length}</p>
           </div>
       </div>
-      
-      {/* <p><i>Child status is: <strong>{isSolutionCorrect ? "TRUE" : "FALSE"}</strong></i></p> */}
       
       <CodeEditor challengeSolved={handleStatusChange} codeBlock={currentQuestion.codeBlock}/>
 

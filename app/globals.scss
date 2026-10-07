@@ -1,5 +1,5 @@
-@import "styles/variables.scss";
-@import "styles/mixins.scss";
+@use "styles/variables.scss";
+@use "styles/mixins.scss";
 
 //Global Styles
 html{
@@ -26,6 +26,14 @@ main{
         //margin-top: 0;
         //margin-left: 278px;
     }
+}
+
+code{
+    background: #081a1e;
+    border-radius: 30px;
+    font-family: Courier, monospace;
+    font-weight: normal;
+    padding: 6px 12px 8px;
 }
 
 h1{
@@ -75,6 +83,9 @@ input, textarea, select, button {
 //Flexbox Layout
 .flex{
     display: flex;
+    @include breakpointBelow($breakpointTablet){
+        flex-direction: column;
+    }
     &.justify-content{
         justify-content: space-between;
     }

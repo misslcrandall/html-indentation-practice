@@ -16,6 +16,18 @@
             font-weight: bold;
         }
     }
+    .instructions{
+        h2, p{
+            display: inline-flex;
+            align-items: center;
+        }
+        h2 code{
+            font-size: 1.2rem;
+        }
+        p code{
+            font-size: 1rem;
+        }
+    }
     .navigation{
         display: flex;
         justify-content: space-between;
@@ -27,5 +39,6 @@
     }
     .endPage{
         text-align: center;
+        h2{margin: 0;}
     }
 }
